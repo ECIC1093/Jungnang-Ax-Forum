@@ -26,7 +26,6 @@
 :root{
   --paper:#f5f3ee; --paper2:#fbfaf7; --ink:#18181b; --sub:#55565c; --mute:#8a8a90; --rule:#dcd7cc;
   --blue:#2a44d4; --coral:#f26a5a; --teal:#22a58c; --orange:#f5a524; --violet:#8a5cf0;
-  --jn-green:#1c7c38; --s-green:#106a3a; --s-purple:#9e1c84; --s-blue:#0057a3;
   --serif:"Noto Serif KR","Nanum Myeongjo","Batang",serif;
   --sans:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
 }
@@ -41,11 +40,7 @@ a{color:inherit}
 .serif{font-family:var(--serif)}
 
 /* 중랑구 마크·슬로건 */
-.jn{display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:17px;letter-spacing:-.01em;text-decoration:none}
-.jn svg{width:30px;height:26px}
-.slogan{display:inline-flex;align-items:center;gap:5px;font-weight:900;font-size:17px;letter-spacing:-.03em;white-space:nowrap}
-.slogan svg{width:20px;height:18px}
-.slogan .g{color:var(--s-green)}.slogan .p{color:var(--s-purple)}.slogan .b{color:var(--s-blue)}
+.slogan{display:block;height:24px;width:auto}
 
 /* HERO */
 .hero{position:relative;overflow:hidden}
@@ -212,8 +207,6 @@ footer .tag{text-align:center;margin-bottom:26px}
 .ribbon{position:relative;height:220px;margin:0 0 36px}
 .ribbon svg{position:absolute;inset:0;width:100%;height:100%}
 .ribbon path{vector-effect:non-scaling-stroke}
-.marks{display:flex;flex-direction:column;align-items:center;gap:10px}
-.marks .slogan{font-size:22px}.marks .slogan svg{width:26px;height:23px}
 footer .fine{text-align:center;color:var(--sub);font-size:14px;margin-top:28px}
 footer .fine b{color:var(--ink)}
 
@@ -231,7 +224,7 @@ footer .fine b{color:var(--ink)}
   .top .label{font-size:11px;letter-spacing:.12em;max-width:170px}
   .top .label .wide{display:none}
   .top .right{flex-direction:column-reverse;align-items:flex-end;gap:6px}
-  .top .slogan{font-size:14px}.top .slogan svg{width:16px;height:14px}
+  .top .slogan{height:19px}
   .title{padding-top:40px}
   .stage .tag{margin:-14px 0 0;font-size:26px}
   .mk .lb b,.end .lb b{font-size:15px}
@@ -261,17 +254,6 @@ footer .fine b{color:var(--ink)}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="jnmark" viewBox="30 100 610 530">
-    <clipPath id="jnSun"><path d="M222 0L608 0L608 320L560 320C470 300 380 320 300 392C270 418 245 432 222 440Z"/></clipPath>
-    <circle cx="292" cy="352" r="72" fill="#F18D00" clip-path="url(#jnSun)"/>
-    <g fill="none" stroke="#1C7C38" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M560 320C470 300 380 320 300 392C240 445 160 450 110 410C50 360 60 250 150 240C170 238 185 240 198 248C195 170 250 130 300 130C360 130 405 175 405 245C470 225 545 260 552 322"/>
-      <path d="M92 530C200 560 290 500 360 452C420 412 500 398 572 406"/>
-      <path d="M298 600C360 556 430 498 572 492"/>
-    </g>
-  </symbol>
-</svg>
 <a class="skip" href="#about">본문 바로가기</a>
 
 <header class="hero" role="banner">
@@ -279,7 +261,8 @@ footer .fine b{color:var(--ink)}
     <span class="label">Jungnang AX 2030 Strategy Forum<span class="wide"> · No. 01</span></span>
     <span class="right">
       <span class="dday" id="dday" hidden></span>
-      <span class="slogan" aria-label="나의 자랑 우리 중랑"><span class="g">나의</span><span class="p">자랑</span><svg aria-hidden="true"><use href="#jnmark"/></svg><span class="g">우리</span><span class="b">중랑</span></span>
+      <!-- 민선8기 슬로건 1열 휘장 결합형(공식 파일). 가이드: 단독 사용, 휘장(중랑구 로고)과 같이 쓰지 않음, 색·비율 변경 금지 -->
+      <img class="slogan" src="assets/slogan-1row.png" width="900" height="119" alt="나의 자랑 우리 중랑">
     </span>
   </div>
 
@@ -477,10 +460,6 @@ footer .fine b{color:var(--ink)}
   <p class="tag">새로운 연결, 다른 경험</p>
   <div class="ribbon" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><g id="ribbonLines"></g></svg></div>
   <div class="wrap">
-    <div class="marks">
-      <span class="jn"><svg aria-hidden="true"><use href="#jnmark"/></svg>중랑구</span>
-      <span class="slogan" aria-label="나의 자랑 우리 중랑"><span class="g">나의</span><span class="p">자랑</span><svg aria-hidden="true"><use href="#jnmark"/></svg><span class="g">우리</span><span class="b">중랑</span></span>
-    </div>
     <p class="fine"><b>제1차 중랑AX 2030 전략포럼</b> · 주최 중랑구(기획예산과 · 중랑AI혁신팀)<br>이 페이지는 2026년 11월 13일 기준 내용입니다. 세부 사항은 바뀔 수 있습니다.</p>
   </div>
 </footer>
