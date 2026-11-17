@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/jaryojip",
+      "destination": "/files/jungnang-ax2030-forum-01-jaryojip.pdf",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
